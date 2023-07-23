@@ -38,7 +38,7 @@ for case in cases:
     RTDOSEs_paths = []
     
     for folder in folders:
-        first_file = glob(folder+"/*")[0]
+        first_file = glob(folder+"/*.dcm")[0]
         dd = pydicom.read_file(first_file)
 
         if dd['Modality'].value == 'MR':
